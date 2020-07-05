@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Profile from "../components/profile"
-import "./index.scss"
+import "./blog-template.scss"
 
 import {
   FontAwesomeIcon
@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 
-const IndexPage = ({ data, location, pageContext }) => (
+const BlogPage = ({ data, location, pageContext }) => (
   <Layout>
     <SEO
       pagetitle="komoriko"
@@ -61,7 +61,7 @@ const IndexPage = ({ data, location, pageContext }) => (
           </article>
           ))}
         </div>
-        {/* <ul>
+        <ul>
             {!pageContext.isFirst && (
               <li className="prev">
                 <Link
@@ -85,7 +85,7 @@ const IndexPage = ({ data, location, pageContext }) => (
                 </Link>
               </li>
             )}
-        </ul> */}
+        </ul>
       </div>
     </section>
 
@@ -96,11 +96,11 @@ const IndexPage = ({ data, location, pageContext }) => (
   </Layout>
 )
 
-export default IndexPage
+export default BlogPage
 
 
 export const query = graphql`
-  query {
+  query($skip: Int!, $limit: Int!) {
     profilei:file(relativePath: {eq: "profile-i.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1600) {
@@ -111,8 +111,8 @@ export const query = graphql`
 
     allContentfulBlogPost(
       sort: {order: DESC, fields: publishDate}
-      skip: 0
-      limit: 12
+      skip: $skip
+      limit: $limit
     ) {
       edges {
         node {

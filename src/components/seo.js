@@ -72,6 +72,13 @@ function SEO({ description, lang, meta, title }) {
   )
 }
 
+
+
+// const imgurl = props.pageimg
+//   ? `${data.site.siteMetadata.siteUrl}${props.pageimg}`
+//   : props.blogimg || `${data.site.siteMetadata.siteUrl}/thumb.jpg`
+// <meta property="og:image" content={imgurl} /> 
+
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
@@ -84,5 +91,6 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
+
 
 export default SEO

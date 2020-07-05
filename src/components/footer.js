@@ -1,14 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./header.scss"
+import "./footer.scss"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <Link to={`/blog/`}>
-      <h1>{ siteTitle }</h1>
-    </Link>
-    <nav className="header-menu">
+const Footer = () => (
+  <footer>
+    <nav className="footer-menu">
         <ul>
             <li><Link to={`/category/seisakukiso/`}>制作基礎</Link></li>
             <li><Link to={`/category/spa/`}>SPA</Link></li>
@@ -18,7 +15,8 @@ const Header = ({ siteTitle }) => (
             <li><Link to={`/category/poem/`}>ポエム</Link></li>
         </ul>
     </nav>
-  </header>
+    <small>©️Copyright komoriko All rights reserved</small>
+  </footer>
 )
 
-export default Header
+export default Footer

@@ -1,0 +1,309 @@
+main {
+    background-color: #fafafa;
+    .all-content {
+        margin: 0;
+    .content {
+        .container {
+            h1 {
+                font-size: 24px;
+                text-align: center;
+                border: 4px solid #3D144E;
+                margin: 8% 20% 0;
+                padding: 2% 0;
+                display: flex;
+                justify-content: center;
+                color: #3D144E;
+            }
+            .posts {
+                margin: 0;
+                padding: 12% 8% 0;
+                .post {
+                    margin: 0 0 12%;
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        text-decoration: none;
+                        figure {
+                            border: 4px solid #3D144E;
+                            margin: 0;
+                            // height: 100%;
+                            height: 200px;
+                            width: 100%;
+                            object-fit: cover;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .post-t {
+                            background-color: #eee;
+                            border: 4px solid #3D144E;
+                            margin: 2% 0 0;
+                            padding: 2%;
+                            .post-t-tu {
+                                display: flex;
+                                flex-direction: row;
+                                margin: 0 0 4%;
+                                ul {
+                                    margin: 0 4% 0 0;
+                                    background-color: #3D144E;
+                                    li {
+                                        list-style: none;
+                                        margin: 0;
+                                        font-weight: bold;
+                                        a {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                time {
+
+                                }
+                            }
+                            h2 {
+                                color: #3D144E;
+                                font-size: 24px; 
+                                margin: 0 0 4%;   
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        i {
+
+                        }
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 560px) {
+
+
+main {
+    .all-content {
+        margin: 0;
+    .content {
+        .container {
+            h1 {
+                font-size: 24px;
+                text-align: center;
+                border: 4px solid #3D144E;
+                margin: 8% 20% 0;
+                padding: 2% 0;
+                display: flex;
+                justify-content: center;
+                color: #3D144E;
+            }
+            .posts {
+                padding: 6% 8% 0;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .post {
+                    width: calc( 96% / 2 );
+                    margin: 0 1% 6%;
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        text-decoration: none;
+                        figure {
+                            border: 4px solid #3D144E;
+                            margin: 0;
+                            // height: 100%;
+                            height: 200px;
+                            width: 100%;
+                            object-fit: cover;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .post-t {
+                            background-color: #eee;
+                            border: 4px solid #3D144E;
+                            margin: 2% 0 0;
+                            padding: 2%;
+                            .post-t-tu {
+                                display: flex;
+                                flex-direction: row;
+                                margin: 0 0 4%;
+                                ul {
+                                    margin: 0 4% 0 0;
+                                    background-color: #3D144E;
+                                    li {
+                                        list-style: none;
+                                        margin: 0;
+                                        font-weight: bold;
+                                        a {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                time {
+
+                                }
+                            }
+                            h2 {
+                                color: #3D144E;
+                                font-size: 24px; 
+                                margin: 0 0 4%;   
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        i {
+
+                        }
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 790px) {
+
+
+main {
+    .all-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 8%;
+        padding: 2% 0 0;
+    .content {
+        width: 75%;
+        padding: 2%;
+        margin: 0%;
+        .container {
+            h1 {
+                font-size: 24px;
+                text-align: center;
+                border: 4px solid #3D144E;
+                margin: 0% 20% 4%;
+                padding: 1% 0;
+                display: flex;
+                justify-content: center;
+                color: #3D144E;
+            }
+            .posts {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .post {
+                    width: calc( 94% / 3 );
+                    margin: 0 1% 6%;
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        text-decoration: none;
+                        figure {
+                            border: 4px solid #3D144E;
+                            margin: 0;
+                            height: 180px;
+                            width: 100%;
+                            object-fit: cover;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .post-t {
+                            background-color: #eee;
+                            border: 4px solid #3D144E;
+                            margin: 2% 0 0;
+                            padding: 2% 2% 6%;
+                            .post-t-tu {
+                                display: flex;
+                                flex-direction: row;
+                                margin: 0 0 4%;
+                                ul {
+                                    margin: 0 4% 0 0;
+                                    background-color: #3D144E;
+                                    li {
+                                        list-style: none;
+                                        margin: 0;
+                                        font-weight: bold;
+                                        font-size: 16px;
+                                        a {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                                time {
+                                    font-size: 16px;
+                                }
+                            }
+                            h2 {
+                                color: #3D144E;
+                                font-size: 18px;    
+                                margin: 0;   
+                                line-height: 1.4;   
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        i {
+
+                        }
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+}

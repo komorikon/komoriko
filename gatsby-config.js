@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `komoriko`,
+    description: `web creator blog`,
+    author: `shuhei komori`,
   },
   plugins: [
+    `gatsby-plugin-offline`, 
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `o446mc1n4bib`,
+        accessToken: `q5Y4hudEpHBUy0yilkuj595QuSqo20l3nq5DjjBy4bE`,
+      }
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,6 +36,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-playground`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,0 +1,257 @@
+main {
+   .eyecatch {
+       figure {
+        height: 320px;
+        object-fit: cover;
+           img {
+                
+           }
+       }
+   } 
+
+   .content-bp {
+       padding: 4% 8%;
+       .info {
+           display: flex;
+           time {
+               i {
+
+               }
+           }
+           .cat {
+               margin-left: 8%;
+               display: flex;
+               flex-direction: row;
+               i {
+
+               }
+               ul {
+                   margin: 0 0 0;
+                   li {
+                       list-style: none;
+                       a {
+                        text-decoration: none;
+                       }
+                   }
+               }
+           }
+       }
+
+       .container-bp {
+           .bar-bp {
+               font-size: 24px;
+               border-bottom: 4px solid #D1BED9;
+               padding: 2%;
+            }
+               .postbody {
+                   
+               }
+
+               ul {
+                   margin: 12% 0 6%;
+                   li {
+                    list-style: none;
+                    background-color: #fafafa;
+                    display: block;
+                    text-align: center;
+                    padding: 1% 0;
+                       a {
+                           text-decoration: none;
+                           
+                           i {
+                            
+                           }
+                           span {
+
+                           }
+                       }
+                   }
+               }
+           
+       }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 560px) {
+
+
+main {
+    .eyecatch {
+        figure {
+            height: 480px;
+            object-fit: cover;
+            img {
+                    
+            }
+        }
+    } 
+    
+    .content-bp {
+        padding: 4% 8%;
+        .info {
+            display: flex;
+            time {
+                i {
+    
+                }
+            }
+            .cat {
+                margin-left: 8%;
+                display: flex;
+                flex-direction: row;
+                i {
+    
+                }
+                ul {
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .container-bp {
+            .bar-bp {
+                font-size: 24px;
+                border-bottom: 4px solid #D1BED9;
+                padding: 2%;
+                }
+                .postbody {
+                    
+                }
+    
+                ul {
+                    margin: 12% auto 6%;
+                    li {
+                        list-style: none;
+                        background-color: #fafafa;
+                        a {
+                            text-decoration: none;
+                            
+                            i {
+                                
+                            }
+                            span {
+    
+                            }
+                        }
+                    }
+                }
+            
+        }
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 790px) {
+
+
+main {
+    .eyecatch {
+        figure {
+            height: 360px;
+            object-fit: cover;
+            img {
+                    
+            }
+        }
+    } 
+    
+    .all-content-bp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2% 8%;
+    .content-bp {
+        background-color: #fafafa;
+        width: 75%;
+        padding: 1%;
+        margin: 0%;
+        // margin: 4% 8%;
+        padding: 4% 8%;
+        .info {
+            display: flex;
+            time {
+                i {
+    
+                }
+            }
+            .cat {
+                margin-left: 4%;
+                display: flex;
+                flex-direction: row;
+                i {
+    
+                }
+                ul {
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .container-bp {
+            .bar-bp {
+                font-size: 36px;
+                border-bottom: 4px solid #D1BED9;
+                padding: 2%;
+                }
+                .postbody {
+                    margin: 4% 0 0;
+                    padding: 2%;
+                }
+    
+                ul {
+                    margin: 12% auto 6%;
+                    li {
+                        list-style: none;
+                        background-color: #fafafa;
+                        a {
+                            text-decoration: none;
+                            
+                            i {
+                                
+                            }
+                            span {
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+}

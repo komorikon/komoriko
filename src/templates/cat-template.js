@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Profile from "../components/profile"
-import "./index.scss"
+import "./cat-template.scss"
 
 import {
   FontAwesomeIcon
@@ -15,22 +15,19 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons"
-import {
-  faTwitter,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons"
 
 
-const IndexPage = ({ data, location, pageContext }) => (
+const CategoryPage = ({ data, location, pageContext }) => (
   <Layout>
     <SEO
-      pagetitle="komoriko"
-      pagedesc="komorikonblog"
+      pagetitle={`${pageContext.catname}`}
+      pagedesc={`「${pageContext.catname}」カテゴリーの記事です`}
       pagepath={location.pathname}
     />
     <div className="all-content">
     <section className="content bloglist">
       <div className="container">
+        <h1>【{pageContext.catname}】</h1>
         <div className="posts">
           {data.allContentfulBlogPost.edges.map(({ node }) => (
           <article className="post" key={node.id}>
@@ -61,14 +58,14 @@ const IndexPage = ({ data, location, pageContext }) => (
           </article>
           ))}
         </div>
-        {/* <ul>
+        <ul>
             {!pageContext.isFirst && (
               <li className="prev">
                 <Link
                   to={
                     pageContext.currentPage === 2
-                      ? `/blog/`
-                      : `/blog/${pageContext.currentPage - 1}/`
+                      ? `/category/${pageContext.catslug}/`
+                      : `/category/${pageContext.catslug}/${pageContext.currentPage - 1}/`
                   }
                   rel = "prev"
                 >
@@ -79,16 +76,16 @@ const IndexPage = ({ data, location, pageContext }) => (
             )}
             {!pageContext.isLast && (
               <li className="next">
-                <Link to={`/blog/${pageContext.currentPage + 1}/`} rel="next">
+                <Link to={`/category/${pageContext.catslug}/${pageContext.currentPage + 1}/`} rel="next">
                   <span>次ページへ</span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </Link>
               </li>
             )}
-        </ul> */}
+        </ul>
       </div>
-    </section>
 
+    </section>
 
     <Profile />
 
@@ -96,23 +93,16 @@ const IndexPage = ({ data, location, pageContext }) => (
   </Layout>
 )
 
-export default IndexPage
+export default CategoryPage
 
 
 export const query = graphql`
-  query {
-    profilei:file(relativePath: {eq: "profile-i.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-
+  query($catid: String!, $skip: Int!, $limit: Int!) {
     allContentfulBlogPost(
       sort: {order: DESC, fields: publishDate}
-      skip: 0
-      limit: 12
+      skip: $skip
+      limit: $limit
+      filter: { category: { elemMatch: { id: { eq: $catid } } } }
     ) {
       edges {
         node {
