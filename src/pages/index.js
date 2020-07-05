@@ -90,7 +90,7 @@ const IndexPage = ({ data, location, pageContext }) => (
     </section>
 
 
-    <Profile />
+    {/* <Profile /> */}
 
     </div>
   </Layout>
